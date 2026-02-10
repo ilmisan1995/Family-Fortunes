@@ -1,0 +1,11 @@
+{
+  "pertanyaan": "APA YANG DILAKUKAN SAAT BANGUN TIDUR?",
+  "multiplier": 1,
+  "jawaban": [
+    {"text": "MANDI", "points": 35},
+    {"text": "MINUM AIR", "points": 25},
+    {"text": "CEK HP", "points": 20},
+    {"text": "BERDOA", "points": 10},
+    {"text": "OLAH RAGA", "points": 10}
+  ]
+}
