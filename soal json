@@ -1,0 +1,22 @@
+{
+  "pertanyaan": "APA YANG BIASA ADA DI DOMPET?",
+  "multiplier": 1,
+  "jawaban": [
+    { "text": "UANG", "points": 45 },
+    { "text": "KTP", "points": 25 },
+    { "text": "FOTO", "points": 15 },
+    { "text": "STNK", "points": 10 },
+    { "text": "KARTU ATM", "points": 5 }
+  ]
+},
+{
+  "pertanyaan": "APA YANG BIASA ADA DI DOMPET?",
+  "multiplier": 2,
+  "jawaban": [
+    { "text": "UANG", "points": 45 },
+    { "text": "KTP", "points": 25 },
+    { "text": "FOTO", "points": 15 },
+    { "text": "STNK", "points": 10 },
+    { "text": "KARTU ATM", "points": 5 }
+  ]
+}
