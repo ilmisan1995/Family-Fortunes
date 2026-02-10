@@ -1,0 +1,106 @@
+:root {
+    --led-yellow: #FFCC00;
+    --led-dim: #332200;
+    --strike-red: #FF0000;
+    --bg-black: #050505;
+}
+
+body {
+    background: #111;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* DOT MATRIX BACKGROUND */
+.game-board {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-black);
+    background-image: radial-gradient(#222 15%, transparent 15%);
+    background-size: 6px 6px;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MENU & MODAL */
+.menu-overlay, .modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 1000;
+}
+
+.menu-content, .modal-content {
+    background: #000;
+    border: 5px double var(--led-yellow);
+    padding: 40px;
+    text-align: center;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* SKOR & PERTANYAAN */
+.top-row { display: flex; justify-content: space-between; margin-bottom: 20px; }
+.score-display { border: 3px solid #333; padding: 10px; min-width: 150px; color: var(--led-yellow); }
+.score-display span { font-size: 3.5rem; font-weight: bold; }
+
+.question-box {
+    border: 2px solid var(--led-yellow);
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+}
+.q-row { font-size: 1.8rem; color: var(--led-yellow); min-height: 35px; }
+
+/* GRID NORMAL MODE */
+.main-grid {
+    display: grid;
+    grid-template-columns: 120px 1fr 120px;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.answer-container {
+    background: rgba(0,0,0,0.8);
+    border: 1px solid #222;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    color: var(--led-dim);
+}
+
+.answer-container.revealed {
+    color: var(--led-yellow);
+    border-color: var(--led-yellow);
+    text-shadow: 0 0 10px var(--led-yellow);
+}
+
+/* FAST MONEY GRID */
+.fast-money-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+/* STRIKE X */
+.x-mark { font-size: 3rem; color: #200; margin: 0 5px; transition: 0.2s; }
+.x-mark.active { color: var(--strike-red); text-shadow: 0 0 20px red; }
+
+/* INPUT POJOK */
+.input-overlay {
+    position: fixed; bottom: 20px; right: 20px;
+    background: #222; padding: 10px; border: 2px solid var(--led-yellow);
+}
+#userInput { background: #000; color: var(--led-yellow); border: 1px solid #444; padding: 10px; }
+
+/* BUTTONS */
+.menu-btn { background: transparent; color: var(--led-yellow); border: 2px solid var(--led-yellow); padding: 15px; margin: 10px; cursor: pointer; width: 100%; }
+.menu-btn:hover { background: var(--led-yellow); color: #000; }
